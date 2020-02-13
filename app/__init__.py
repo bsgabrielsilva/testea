@@ -13,7 +13,7 @@ migrate = Migrate(app, db)
 
 api = Api(app)
 
-from .urls import *
+from .views import *
 from .models import *
 
 

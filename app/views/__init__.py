@@ -1,1 +1,1 @@
-from .cidade_view import CidadeList
+from .cidade_view import home_cidade
