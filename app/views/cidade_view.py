@@ -3,13 +3,11 @@ from app import app
 from ..services import consultar_cidade
 
 
-@app.route('/cidade', methods=['GET',])
+@app.route('/cidade', methods=['GET'])
 def home_cidade():
     cidade = request.args.get('cidade')
-    estado = request.args.get('cidade')
-    dados = ''
+    estado = request.args.get('estado')
     if estado is not None and cidade is not None:
-        dados = consultar_cidade(cidade, estado)
+        return consultar_cidade(cidade=cidade, estado=estado)
     else:
-        dados = "Nada deu certo!"
-    return dados
+        return "Nada deu certo!"
