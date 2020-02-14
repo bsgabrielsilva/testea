@@ -9,4 +9,4 @@ def consultar_cidade(cidade, estado):
     if r.status_code == 200:
         return r.json()[0]
     else:
-        return "Alguma coisa deu errado na solicitação!"
+        return None

@@ -1,0 +1,1 @@
+from .cidade_entity import CidadeEntity
