@@ -2,7 +2,7 @@
 
 Projeto escrito utilizando a linguagem Python3 com o Flask
 
-Todas as instruções para o teste foram cumpridas, até houveram inserções extras!
+Todas as instruções para o teste foram cumpridas, até houve inserções extras!
 
 ## Instruções para rodar este projeto
 
