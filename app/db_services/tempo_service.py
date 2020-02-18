@@ -19,7 +19,22 @@ def listar_tempo_id(id):
 
 def listar_tempo_data_cidade(data, cidade):
     tempo = Tempo.query.with_parent(cidade).filter_by(data=data).first()
-    print(tempo)
+    return tempo
+
+
+def listar_tempo_data(data_inicial, data_final):
+    tempo = Tempo.query.filter((Tempo.data >= data_inicial) & (Tempo.data <= data_final)).all()
+    return tempo
+
+
+def listar_tempo_max(data_inicial, data_final):
+    tempo = Tempo.query.filter((Tempo.data >= data_inicial) & (Tempo.data <= data_final)).\
+        order_by(Tempo.max_temp.desc()).first()
+    return tempo
+
+
+def listar_tempo_cidade(cidade):
+    tempo = Tempo.query.with_parent(cidade).all()
     return tempo
 
 
