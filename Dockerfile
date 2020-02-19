@@ -16,5 +16,7 @@ ADD . /testeambar/
 
 RUN export FLASK_APP=app.py && export FLASK_ENV=development
 
+RUN flask db upgrade
+
 # Flask service
 EXPOSE 5000
